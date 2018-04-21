@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CoastCRM",
+  "name": "CoastCRM, built on React",
   "icons": [
     {
       "src": "favicon.ico",
