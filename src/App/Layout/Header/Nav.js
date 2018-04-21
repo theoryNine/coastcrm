@@ -1,15 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import Logo from '../../../components/Logo.js'
 
 const Background = styled.div`
-    background-color: ${props => props.theme.coastblue};
-    color: white;
+    background-color: ${props => props.theme.coastSecondary};
+    color: ${props => props.theme.coastSecondary};
+    display: flex;
     height: 100px;
     width: 100%;
 `;
 
 const Nav = () => (
-    <Background><button className="button is-dark">Test</button></Background>
+    <div>
+        <Background>
+            <Logo />
+            <p>Text</p>
+        </Background>
+    </div>
   )
 
 export default Nav;
