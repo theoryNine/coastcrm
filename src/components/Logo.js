@@ -3,7 +3,7 @@ import mainLogo from './Logo/logo.png'
 import styled from 'styled-components'
 
 const LogoImg = styled.img`
-    width: 150px;
+    width: 100px;
 `;
 
 const Logo = () => (
