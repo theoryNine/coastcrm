@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../../../components/Logo.js'
+import NavItem from './Nav/NavMenu/NavItem.js'
 
 const Background = styled.div`
     align-items: center;
@@ -24,7 +25,7 @@ const Nav = () => (
         <Background>
             <InnerBg className="container">
                 <Logo />
-                <span>Text</span>
+                <NavItem />
             </InnerBg>
         </Background>
     </nav>
