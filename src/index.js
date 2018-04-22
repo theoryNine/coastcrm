@@ -9,7 +9,6 @@ const defaultTheme = {
     coastPrimary: 'rgb(38,47,77)',
     coastSecondary: 'rgb(232,233,235)',
     coastorange: 'rgb(240,101,67)',
-    primaryFont: 'Open Sans',
 }
 
 ReactDOM.render(
