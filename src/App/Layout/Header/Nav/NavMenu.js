@@ -5,6 +5,7 @@ import NavItem from './NavMenu/NavItem.js'
 const Menu = styled.div`
     display: flex;
     flex-direction: row;
+    height: 100%;
     justify-content: flex-end;
 `
 

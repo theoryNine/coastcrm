@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Item = styled.a`
+    align-items: center;
+    display: flex;
+    height: 100%;
+    letter-spacing: 2px;
     text-transform: uppercase;
     padding: 0 15px;
 `
