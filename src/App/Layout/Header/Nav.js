@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../../../components/Logo.js'
-import NavItem from './Nav/NavMenu/NavItem.js'
+import NavMenu from './Nav/NavMenu.js'
 
 const Background = styled.div`
     align-items: center;
@@ -20,15 +20,19 @@ const InnerBg = styled.div`
     height: 100%;
 `
 
-const Nav = () => (
-    <nav className="nav" aria-label="Main navigation">
-        <Background>
-            <InnerBg className="container">
-                <Logo />
-                <NavItem />
-            </InnerBg>
-        </Background>
-    </nav>
-  )
+class Nav extends React.Component {
+    render() {
+        return(
+            <nav className="nav" aria-label="Main navigation">
+                <Background>
+                    <InnerBg className="container">
+                        <Logo />
+                        <NavMenu />
+                    </InnerBg>
+                </Background>
+            </nav>
+        )
+    }
+}
 
 export default Nav;
