@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
 
+const Item = styled.a`
+    text-transform: uppercase;
+    padding: 0 15px;
+`
 class NavItem extends React.Component {
     render() {
         return(
-            <span>Text!</span>
+            <Item href={this.props.link}>{this.props.text}</Item>
         );
     }
 }
