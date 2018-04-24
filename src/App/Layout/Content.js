@@ -1,15 +1,10 @@
 import React from 'react'
+import Hero from './Content/Hero.js'
 
 class Content extends React.Component {
     render() {
         return(
-            <div className="hero">
-                <div className="hero-head">Text</div>
-                <div className="hero-body">
-                    <p>Text</p>
-                </div>
-                <div className="hero-foot">Text</div>
-            </div>
+            <Hero />
         );
     }
 }

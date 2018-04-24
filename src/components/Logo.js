@@ -1,10 +1,11 @@
 import React from 'react'
-import mainLogo from './Logo/logo.png'
+import mainLogo from './Logo/logonocopy.png'
 import styled from 'styled-components'
 
 const LogoImg = styled.img`
-    width: 100px;
     display: none;
+    height: 100%;
+    width: auto;
 
     @media (min-width: 768px) {
         display: inline-block;
