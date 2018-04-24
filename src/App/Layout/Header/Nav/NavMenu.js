@@ -13,10 +13,9 @@ class NavMenu extends React.Component {
     render() {
         return(
             <Menu>
-                <NavItem text="Text1" link="https://www.google.com" />
-                <NavItem text="Text2" link="" />
-                <NavItem text="Text3" link="" />
-                <NavItem text="text4" link="" />
+                <NavItem text="Salesforce" link="" />
+                <NavItem text="About Us" link="" />
+                <NavItem text="Contact" link="" />
             </Menu>
         );
     }

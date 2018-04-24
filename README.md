@@ -1,3 +1,8 @@
+COASTCRM Notes:
+- This project was built with Bulma
+- Root custom styles and breakpoints are set in index.scss
+- This project uses a fractal organization pattern
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

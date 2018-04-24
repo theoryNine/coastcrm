@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import styled from 'styled-components'
 import Layout from './App/Layout.js'
+
+const CoastCRM = styled.div`
+  font-family: ${props => props.theme.primaryFont};
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <CoastCRM className="App">
         <Layout />
-      </div>
+      </CoastCRM>
     );
   }
 }

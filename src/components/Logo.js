@@ -4,6 +4,11 @@ import styled from 'styled-components'
 
 const LogoImg = styled.img`
     width: 100px;
+    display: none;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+    }
 `;
 
 const Logo = () => (

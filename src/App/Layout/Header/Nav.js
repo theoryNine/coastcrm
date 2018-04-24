@@ -9,9 +9,13 @@ const Background = styled.div`
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.55);
     color: ${props => props.theme.coastPrimary};
     display: flex;
-    height: 100px;
+    height: 70px;
     opacity: .85;
     width: 100%;
+
+    @media (min-width: 768px) {
+        height: 100px;
+    }
 `
 
 const InnerBg = styled.div`
@@ -19,6 +23,10 @@ const InnerBg = styled.div`
     display: flex;
     height: 100%;
     justify-content: space-between;
+
+    @media (min-width:768px) {
+        justify-content: space-between;
+    }
 `
 
 class Nav extends React.Component {
