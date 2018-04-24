@@ -1,10 +1,10 @@
 ## COASTCRM Notes:
 
 ### Additional tools used
-  - Bulma CSS Framework (https://bulma.io/)
-  - Styled Components (https://www.styled-components.com/)
+  - [Bulma CSS Framework](https://bulma.io/)
+  - [Styled Components](https://www.styled-components.com/)
 - Root custom styles and breakpoints are set in index.scss
-- This project uses a fractal organization pattern
+- This project uses a [fractal structure for folder organization](https://hackernoon.com/fractal-a-react-app-structure-for-infinite-scale-4dab943092af)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
