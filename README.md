@@ -1,6 +1,6 @@
 ## COASTCRM Notes:
 
-#Additional tools used
+### Additional tools used
   - Bulma CSS Framework (https://bulma.io/)
   - Styled Components (https://www.styled-components.com/)
 - Root custom styles and breakpoints are set in index.scss
