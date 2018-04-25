@@ -20,6 +20,7 @@ const LogoTextMobile = styled.img`
 
 const LogoTextDesktop = styled.img`
     display: none;
+    margin-left: -4%;
     margin-top: 70px;
 
     @media (min-width: 768px) {

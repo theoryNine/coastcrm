@@ -6,10 +6,9 @@ const Item = styled.a`
     color: ${props => props.theme.coastPrimary};
     transition: .3s ease all;
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     height: 100%;
-    letter-spacing: 1px;
     text-transform: uppercase;
     padding: 0 8px;
 
@@ -19,12 +18,14 @@ const Item = styled.a`
     }
 
     @media (min-width:768px) {
-        letter-spacing: 3px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
         padding: 0 20px;
     }
 
     @media (min-width: 1088px) {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
         padding: 0 30px;
     }
 
