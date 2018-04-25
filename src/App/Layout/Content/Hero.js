@@ -7,6 +7,7 @@ import FullLogo from './Hero/logo.png'
 const HeroImage = styled.div`
     background-image: url(${HeroBg});
     background-position: center center;
+    background-size: cover;
     border-bottom: 2px solid ${props => props.theme.primaryColor};
 `;
 
