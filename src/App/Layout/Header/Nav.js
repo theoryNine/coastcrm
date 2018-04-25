@@ -6,7 +6,7 @@ import NavMenu from './Nav/NavMenu.js'
 const Background = styled.div`
     align-items: center;
     background-color: ${props => props.theme.coastSecondary};
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.65);
     color: ${props => props.theme.coastPrimary};
     display: flex;
     height: 70px;

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import AltSectionHeader from '../../../components/AltSectionHeader.js'
+import Pattern from './About/cubes.png'
 
 const AboutSection = styled.section`
     background-color: ${props => props.theme.coastPrimary};
+    background-image: url(${Pattern});
     color: ${props => props.theme.coastSecondary};
 `;
 

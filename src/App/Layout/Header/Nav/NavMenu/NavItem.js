@@ -24,11 +24,12 @@ const Item = styled.a`
     }
 
     @media (min-width: 1088px) {
+        font-size: 1.2rem;
         padding: 0 30px;
     }
 
     @media (min-width: 1280px) {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 `
 class NavItem extends React.Component {
