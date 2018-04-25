@@ -6,6 +6,7 @@ import FullLogo from './Hero/logo.png'
 
 const HeroImage = styled.div`
     background-image: url(${HeroBg});
+    background-position: center center;
     border-bottom: 2px solid ${props => props.theme.primaryColor};
 `;
 
@@ -24,7 +25,7 @@ const LogoTextDesktop = styled.img`
     @media (min-width: 768px) {
         display: inline-block;
         width: 35%;
-        margin-top: 8px;
+        margin-top: 10px;
     }
 `;
 

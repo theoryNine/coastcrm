@@ -6,9 +6,10 @@ const Item = styled.a`
     color: ${props => props.theme.coastPrimary};
     transition: .3s ease all;
     display: flex;
+    font-size: 1.1rem;
     font-weight: 700;
     height: 100%;
-    letter-spacing: 0;
+    letter-spacing: 1px;
     text-transform: uppercase;
     padding: 0 8px;
 
