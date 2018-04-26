@@ -1,5 +1,10 @@
 import React from 'react'
 import './Footer/footer.css'
+import styled from 'styled-components'
+
+const Copyright = styled.p`
+    font-size: .8rem;
+`;
 
 class Footer extends React.Component {
     render() {
@@ -7,9 +12,9 @@ class Footer extends React.Component {
             <footer className="footer">
                 <div className="container">
                     <div className="content has-text-centered">
-                    <p>
+                    <Copyright>
                         Copyright © 2018, Coast CRM. All rights reserved.
-                    </p>
+                    </Copyright>
                     </div>
                 </div>
             </footer>
