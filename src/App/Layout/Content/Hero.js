@@ -1,13 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoCopy from './Hero/logocopy.png'
-import HeroBg from './Hero/herobg80.png'
+import HeroBg from './Hero/herobg2.jpg'
 import FullLogo from './Hero/logo.png'
 
 const HeroImage = styled.div`
-    background-image: url(${HeroBg});
-    background-position: center center;
-    background-size: cover;
+    position: relative;
+
+    &:before {
+            content: "";
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            filter: blur(1px);  
+            opacity: .5; 
+            z-index: -1;
+            background: url(${HeroBg});
+            background-size: cover;
+            background-position: center center;
+    }
 `;
 
 const LogoTextMobile = styled.img`
@@ -33,7 +46,7 @@ const LogoTextDesktop = styled.img`
 class Hero extends React.Component {
     render() {
         return(
-            <HeroImage className="hero header-image is-large shadowed">
+            <HeroImage className="hero is-large shadowed">
                 <div className="hero-head container"><LogoTextDesktop src={LogoCopy} /></div>
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} /></div>
                 <div className="hero-foot"></div>

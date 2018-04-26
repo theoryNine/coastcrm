@@ -6,18 +6,22 @@ const Copyright = styled.p`
     font-size: .8rem;
 `;
 
+const FooterSection = styled.footer`
+    background-color: ${props => props.theme.coastPrimary};
+`;
+
 class Footer extends React.Component {
     render() {
         return(
-            <footer className="footer">
+            <FooterSection className="footer">
                 <div className="container">
                     <div className="content has-text-centered">
-                    <Copyright>
+                    <Copyright className="light">
                         Copyright © 2018, Coast CRM. All rights reserved.
                     </Copyright>
                     </div>
                 </div>
-            </footer>
+            </FooterSection>
         )
     }
 }

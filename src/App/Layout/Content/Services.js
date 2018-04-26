@@ -1,18 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import SectionHeader from '../../../components/SectionHeader.js'
-
-const Divider = styled.span`
-    border-top: 2px solid ${props => props.theme.coastPrimary};
-    display: block;
-    margin-bottom: 24px;
-    margin-left: -24px;
-    width: 85%;
-
-    @media (min-width: 768px) {
-        width: 65%
-    }
-`;
+import Divider from '../../../components/Divider.js'
 
 class Services extends React.Component {
     render() {
