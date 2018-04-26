@@ -8,7 +8,6 @@ const HeroImage = styled.div`
     background-image: url(${HeroBg});
     background-position: center center;
     background-size: cover;
-    border-bottom: 2px solid ${props => props.theme.primaryColor};
 `;
 
 const LogoTextMobile = styled.img`
@@ -34,7 +33,7 @@ const LogoTextDesktop = styled.img`
 class Hero extends React.Component {
     render() {
         return(
-            <HeroImage className="hero header-image is-large">
+            <HeroImage className="hero header-image is-large shadowed">
                 <div className="hero-head container"><LogoTextDesktop src={LogoCopy} /></div>
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} /></div>
                 <div className="hero-foot"></div>

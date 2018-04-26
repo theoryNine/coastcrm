@@ -6,7 +6,6 @@ import NavMenu from './Nav/NavMenu.js'
 const Background = styled.div`
     align-items: center;
     background-color: ${props => props.theme.coastSecondary};
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.65);
     color: ${props => props.theme.coastPrimary};
     display: flex;
     height: 70px;
@@ -33,7 +32,7 @@ class Nav extends React.Component {
     render() {
         return(
             <nav className="nav" aria-label="Main navigation">
-                <Background>
+                <Background className="shadowed">
                     <InnerBg className="container">
                         <Logo />
                         <NavMenu />
