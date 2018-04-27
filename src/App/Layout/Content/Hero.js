@@ -14,12 +14,12 @@ const HeroImage = styled.div`
             left: 0;
             width: 100%; 
             height: 100%;
-            filter: blur(1px);  
-            opacity: .5; 
+            filter: blur(2px);  
+            opacity: .6; 
             z-index: -1;
             background: url(${HeroBg});
             background-size: cover;
-            background-position: center center;
+            background-position: center;
     }
 `;
 
@@ -38,7 +38,7 @@ const LogoTextDesktop = styled.img`
 
     @media (min-width: 768px) {
         display: inline-block;
-        width: 35%;
+        width: 40%;
         margin-top: 10px;
     }
 `;
