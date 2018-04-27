@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import Moment from 'react-moment';
 
 const Copyright = styled.p`
-    font-size: .8rem;
+    font-size: ${props => props.theme.copyrightSize};
 
     & time {
-        font-size: .8rem;
+        font-size: ${props => props.theme.copyrightSize};
     }
 `;
 

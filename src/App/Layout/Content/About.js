@@ -13,7 +13,7 @@ const AboutSection = styled.section`
 class About extends React.Component {
     render() {
         return(
-            <AboutSection className="section light">
+            <AboutSection className="section shadowed light">
                 <ScrollableAnchor id={'about'}>
                     <AltSectionHeader light={true} text="Who We Are" />
                 </ScrollableAnchor>
