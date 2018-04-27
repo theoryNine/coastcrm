@@ -1,9 +1,14 @@
 import React from 'react'
 import './Footer/footer.css'
 import styled from 'styled-components'
+import Moment from 'react-moment';
 
 const Copyright = styled.p`
     font-size: .8rem;
+
+    & time {
+        font-size: .8rem;
+    }
 `;
 
 const FooterSection = styled.footer`
@@ -17,7 +22,7 @@ class Footer extends React.Component {
                 <div className="container">
                     <div className="content has-text-centered">
                     <Copyright className="light">
-                        Copyright © 2018, Coast CRM. All rights reserved.
+                        Copyright © <Moment format="YYYY"></Moment>, Coast CRM. All rights reserved.
                     </Copyright>
                     </div>
                 </div>
