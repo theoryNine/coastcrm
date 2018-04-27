@@ -15,11 +15,15 @@ const HeroImage = styled.div`
             width: 100%; 
             height: 100%;
             filter: blur(2px);  
-            opacity: .6; 
+            opacity: .5; 
             z-index: -1;
             background: url(${HeroBg});
             background-size: cover;
             background-position: center;
+
+            @media (min-width: 768px) {
+                opacity: .6;
+            }
     }
 `;
 
