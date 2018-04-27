@@ -1,6 +1,7 @@
 {
   "name": "coastcrm",
   "version": "0.1.0",
+  "homepage": "http://www.anselcolvin.com/coast",
   "private": true,
   "dependencies": {
     "bulma": "^0.7.1",
