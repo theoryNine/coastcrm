@@ -28,10 +28,6 @@ const Item = styled.a`
         letter-spacing: 2px;
         padding: 0 30px;
     }
-
-    @media (min-width: 1280px) {
-        font-size: 1.5rem;
-    }
 `
 class NavItem extends React.Component {
     render() {

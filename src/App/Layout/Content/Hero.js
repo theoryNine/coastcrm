@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoCopy from './Hero/logocopy.png'
-import HeroBg from './Hero/herobg2.jpg'
+import HeroBg from './Hero/herobg4.jpg'
 import FullLogo from './Hero/logo.png'
 
 const HeroImage = styled.div`
@@ -14,7 +14,6 @@ const HeroImage = styled.div`
             left: 0;
             width: 100%; 
             height: 100%;
-            filter: blur(2px);  
             opacity: .5; 
             z-index: -1;
             background: url(${HeroBg});
