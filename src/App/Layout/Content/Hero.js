@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoCopy from './Hero/logocopy.png'
-import HeroBg from './Hero/herobg4.jpg'
+import HeroBg from './Hero/option3.jpg'
 import FullLogo from './Hero/logo.png'
+import Tagline from './Hero/Tagline.js'
 
 const HeroImage = styled.div`
     position: relative;
@@ -51,6 +52,7 @@ class Hero extends React.Component {
         return(
             <HeroImage className="hero is-large shadowed" alt="Hero Banner. Coastal scene with a lighthouse in the background">
                 <div className="hero-head container"><LogoTextDesktop src={LogoCopy} alt="Coast CRM" /></div>
+                <Tagline text="Expanding your Salesforce horizons" />
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} alt="Coast CRM Logo" /></div>
                 <div className="hero-foot"></div>
             </HeroImage>
