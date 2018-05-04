@@ -8,15 +8,15 @@ const TaglineComponent = styled.div`
         background: linear-gradient(90deg,${props => props.theme.coastPrimary} 0%,${props => props.theme.coastPrimary} 75%,rgba(255,255,255,0) 100%);
         display: block;
         opacity: .9;
-        padding: 18px;
+        padding: 1rem;
     }
 
     @media (min-width: 1080px) {
-        background: linear-gradient(90deg, ${props => props.theme.coastPrimary} 0%, ${props => props.theme.coastPrimary} 45%, rgba(255,255,255,0) 75%);
+        background: linear-gradient(90deg, ${props => props.theme.coastPrimary} 0%, ${props => props.theme.coastPrimary} 55%, rgba(255,255,255,0) 70%);
     }
 
     @media (min-width: 1400px) {
-        background: linear-gradient(90deg, ${props => props.theme.coastPrimary} 0%, ${props => props.theme.coastPrimary} 35%, rgba(255,255,255,0) 75%);
+        background: linear-gradient(90deg, ${props => props.theme.coastPrimary} 0%, ${props => props.theme.coastPrimary} 40%, rgba(255,255,255,0) 60%);
     }
 
     @media (min-width: 1900px) {
@@ -26,7 +26,7 @@ const TaglineComponent = styled.div`
 
 const TaglineText = styled.h1`
     color: ${props => props.theme.coastSecondary};
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     letter-spacing: 4px;
     font-weight: 700;
 `;

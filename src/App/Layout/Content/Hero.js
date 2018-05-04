@@ -50,8 +50,8 @@ const LogoTextDesktop = styled.img`
 class Hero extends React.Component {
     render() {
         return(
-            <HeroImage className="hero is-large shadowed" alt="Hero Banner. Coastal scene with a lighthouse in the background">
-                <div className="hero-head container"><LogoTextDesktop src={LogoCopy} alt="Coast CRM" /></div>
+            <HeroImage className="hero is-large shadowed" alt="">
+                <div className="hero-head container"><LogoTextDesktop src={LogoCopy} alt="Coast CRM Logo" /></div>
                 <Tagline text="Expanding your Salesforce horizons" />
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} alt="Coast CRM Logo" /></div>
                 <div className="hero-foot"></div>
