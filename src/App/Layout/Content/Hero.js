@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoCopy from './Hero/logocopy.png'
-import HeroBg from './Hero/option3.jpg'
+import HeroBg from './Hero/7.jpg'
 import FullLogo from './Hero/logo.png'
 import Tagline from './Hero/Tagline.js'
 

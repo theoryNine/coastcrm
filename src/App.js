@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Layout from './App/Layout.js'
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import faCloud from '@fortawesome/fontawesome-free-solid/faCloud'
+
+fontawesome.library.add(brands, faCloud)
+
 
 const CoastCRM = styled.div`
     font-family: ${props => props.theme.primaryFont};
