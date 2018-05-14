@@ -8,6 +8,11 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 const AboutSection = styled.section`
     background-color: ${props => props.theme.coastPrimary};
     background-image: url(${Pattern});
+    text-align: center;
+
+    & h2 {
+        font-weight: 600;
+    }
 `;
 
 class About extends React.Component {
@@ -18,9 +23,16 @@ class About extends React.Component {
                     <AltSectionHeader light={true} text="Who We Are" />
                 </ScrollableAnchor>
                 <Divider />
-                <p className="container light">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <div className="container light">
+                    <ul>
+                        <li><h2><em>Experience.</em></h2>
+                        We've implemented Salesforce solutions across industries and with companies of all sizes for over a decade.</li>
+                        <li><h2><em>Expertise.</em></h2>
+                        Impecable technical skills and mastery of best practices; we craft quality.</li>
+                        <li><h2><em>Focus.</em></h2>
+                        User experience matters - if it’s hard to use, people won’t adopt.</li>
+                    </ul>
+                </div>
             </AboutSection>
         );
     }

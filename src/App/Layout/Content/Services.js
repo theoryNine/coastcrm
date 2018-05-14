@@ -14,7 +14,9 @@ class Services extends React.Component {
                 <Divider />
                 <p className="container">
                 <FontAwesomeIcon icon={["fas", "cloud"]} size="6x" />
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <FontAwesomeIcon icon={["fas", "wrench"]} size="6x" />
+                <FontAwesomeIcon icon={["fas", "sync"]} size="6x" />
+                <FontAwesomeIcon icon={["fas", "globe"]} size="6x" />
                 </p>
             </section>
         );

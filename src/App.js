@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Layout from './App/Layout.js'
 import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
-import faCloud from '@fortawesome/fontawesome-free-solid/faCloud'
+import solids from '@fortawesome/fontawesome-free-solid'
 
-fontawesome.library.add(brands, faCloud)
+fontawesome.library.add(brands, solids)
 
 
 const CoastCRM = styled.div`
