@@ -22,7 +22,7 @@ const HeroImage = styled.div`
             background-position: center;
 
             @media (min-width: 768px) {
-                opacity: .6;
+                opacity: .7;
             }
     }
 `;
@@ -52,7 +52,7 @@ class Hero extends React.Component {
         return(
             <HeroImage className="hero is-large shadowed" alt="">
                 <div className="hero-head container"><LogoTextDesktop src={LogoCopy} alt="Coast CRM Logo" /></div>
-                <Tagline text="Expanding your Salesforce horizons" />
+                <Tagline text="Guiding you to Salesforce success" />
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} alt="Coast CRM Logo" /></div>
                 <div className="hero-foot"></div>
             </HeroImage>

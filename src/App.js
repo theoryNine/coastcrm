@@ -12,6 +12,16 @@ const CoastCRM = styled.div`
     font-family: ${props => props.theme.primaryFont};
     font-size: 1rem;
 
+    & h1 {
+        opacity: .9;
+    }
+
+    & h2 {
+        font-weight: 600;
+        letter-spacing: 2px;
+        opacity: .9;
+    }
+
     & .light {
         color: ${props => props.theme.coastSecondary};
 
