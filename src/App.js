@@ -71,6 +71,10 @@ const CoastCRM = styled.div`
         font-size: 1.1rem;
         line-height: 2.1rem;
     }
+
+    & .content-container {
+        max-width: 980px;
+    }
 `
 
 class App extends Component {

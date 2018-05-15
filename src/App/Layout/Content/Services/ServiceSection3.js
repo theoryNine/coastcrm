@@ -6,7 +6,7 @@ const ServiceContainer = styled.div`
     color: ${props => props.theme.coastPrimary};
     display: flex;
     flex-direction: row;
-    margin: 50px auto;
+    margin: auto;
 `
 
 const ServiceHeader = styled.h2`
@@ -36,18 +36,19 @@ const ServiceDescContainer = styled.div`
     }
 `
 
-class ServiceSection1 extends React.Component {
+class ServiceSection3 extends React.Component {
     render() {
         return(
             <div className="container content-container">
                 <ServiceContainer>
                     <ServiceIconContainer>
-                        <FontAwesomeIcon icon={["fas", "compass"]} size="6x" />
+                        <FontAwesomeIcon icon={["fas", "handshake"]} size="6x" />
                     </ServiceIconContainer>
                     <ServiceDescContainer>
-                        <ServiceHeader>Design & Strategy</ServiceHeader>
-                        <p>Where does Salesforce fit into your business in today's technology landscape? 
-                        Coast CRM will help you design your perfect Salesforce solution, tailored to the long-term strategic needs of your business.</p>
+                        <ServiceHeader>Sustainable Partners</ServiceHeader>
+                        <p>Your business changes, your Salesforce implementations should change to keep up. Salesforce 
+                        releases new features 3 times a year, Coast CRM will stay with you to help evolve your Salesforce 
+                        solutions to take advantage of the latest features.</p>
                     </ServiceDescContainer>
                 </ServiceContainer>
             </div>
@@ -55,4 +56,4 @@ class ServiceSection1 extends React.Component {
     }
 }
 
-export default ServiceSection1;
+export default ServiceSection3;

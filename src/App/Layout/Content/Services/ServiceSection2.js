@@ -7,6 +7,7 @@ const ServiceContainer = styled.div`
     display: flex;
     flex-direction: row;
     margin: 50px auto;
+    margin-top: auto;
 `
 
 const ServiceHeader = styled.h2`
@@ -31,28 +32,37 @@ const ServiceDescContainer = styled.div`
     justify-content: center;
     width: 100%;
 
+    & p {
+        text-align: left;
+
+        @media (min-width: 760px) {
+            text-align: right;
+        }
+    }
+
     @media (min-width: 760px) {
+        align-items: flex-end;
         width: 80%;
     }
 `
 
-class ServiceSection1 extends React.Component {
+class ServiceSection2 extends React.Component {
     render() {
         return(
             <div className="container content-container">
                 <ServiceContainer>
-                    <ServiceIconContainer>
-                        <FontAwesomeIcon icon={["fas", "compass"]} size="6x" />
-                    </ServiceIconContainer>
                     <ServiceDescContainer>
-                        <ServiceHeader>Design & Strategy</ServiceHeader>
+                        <ServiceHeader>Execution & Implementation</ServiceHeader>
                         <p>Where does Salesforce fit into your business in today's technology landscape? 
                         Coast CRM will help you design your perfect Salesforce solution, tailored to the long-term strategic needs of your business.</p>
                     </ServiceDescContainer>
+                    <ServiceIconContainer>
+                        <FontAwesomeIcon icon={["fas", "cog"]} size="6x" />
+                    </ServiceIconContainer>
                 </ServiceContainer>
             </div>
         )
     }
 }
 
-export default ServiceSection1;
+export default ServiceSection2;
