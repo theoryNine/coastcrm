@@ -2,6 +2,7 @@ import React from 'react'
 import SectionHeader from '../../../components/SectionHeader.js'
 import Divider from '../../../components/Divider.js'
 import ScrollableAnchor from 'react-scrollable-anchor'
+import ContactForm from '../../../components/ContactForm.js'
 
 class Contact extends React.Component {
     render() {
@@ -11,10 +12,10 @@ class Contact extends React.Component {
                     <SectionHeader text="Let's Talk" />
                 </ScrollableAnchor>
                 <Divider />
-                <p className="container">
-                    Let us know about your Salesforce project and we'll help you with the next steps.
-                </p>
-            </section>
+                <div className="container content-container">
+                    <ContactForm />
+                </div>
+                </section>
         );
     }
 }

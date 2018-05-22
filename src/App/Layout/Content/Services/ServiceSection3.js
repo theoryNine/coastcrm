@@ -46,7 +46,7 @@ class ServiceSection3 extends React.Component {
                     </ServiceIconContainer>
                     <ServiceDescContainer>
                         <ServiceHeader>Sustainable Partners</ServiceHeader>
-                        <p>Your business changes, your Salesforce implementations should change to keep up. Salesforce 
+                        <p>Your business is constantly changing, your Salesforce implementations need to keep up. Salesforce 
                         releases new features 3 times a year, Coast CRM will stay with you to help evolve your Salesforce 
                         solutions to take advantage of the latest features.</p>
                     </ServiceDescContainer>

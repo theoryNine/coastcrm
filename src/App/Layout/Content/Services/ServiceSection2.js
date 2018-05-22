@@ -53,8 +53,8 @@ class ServiceSection2 extends React.Component {
                 <ServiceContainer>
                     <ServiceDescContainer>
                         <ServiceHeader>Execution & Implementation</ServiceHeader>
-                        <p>Where does Salesforce fit into your business in today's technology landscape? 
-                        Coast CRM will help you design your perfect Salesforce solution, tailored to the long-term strategic needs of your business.</p>
+                        <p>We work in short development cycles incorporating ongoing feedback from stakeholders to ensure 
+                        we're building what you need to address the challenges of your growing business.</p>
                     </ServiceDescContainer>
                     <ServiceIconContainer>
                         <FontAwesomeIcon icon={["fas", "cog"]} size="6x" />
