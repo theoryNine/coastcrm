@@ -1,5 +1,66 @@
 import React from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const FormContainer = styled.div`
+    width: 100%;
+
+    & form {
+        text-align: center;
+
+        & label {
+            font-weight: 700;
+            letter-spacing: 2px;
+            opacity: .9;
+        }
+    }
+
+    & textarea {
+        border: 1px solid ${props => props.theme.coastPrimary};
+        font-size: .9rem;
+        height: 8rem;
+        margin-bottom: 13px;
+        max-width: 400px;
+        padding: 5px;
+        width: 100%;
+    }
+
+    & input {
+        border: 1px solid ${props => props.theme.coastPrimary};
+        font-size: .9rem;
+        margin-bottom: 9px;
+        max-width: 400px;
+        padding: 8px;
+        width: 100%;
+
+        &[type=submit] {
+            background-color: ${props => props.theme.coastPrimary};
+            color: ${props => props.theme.coastSecondary};
+            cursor: pointer;
+            font-weight: 700;
+            font-size: .9rem;
+            margin-bottom: 3rem;
+            padding: 18px;
+            text-transform: uppercase;
+            transition: .2s all;
+            width: 190px;
+
+            &:disabled {
+                background-color: ${props => props.theme.coastPrimary};
+                opacity: .5;
+
+                &:hover {
+                    background-color: ${props => props.theme.coastPrimary};
+                    cursor: default;
+                }
+            }
+
+            &:hover {
+                background-color: ${props => props.theme.coastOrange};
+            }
+        }
+    }
+`
 
 class ContactForm extends React.Component {
     constructor (props) {
@@ -13,7 +74,8 @@ class ContactForm extends React.Component {
             last_name: '',
             email: '',
             company: '',
-            description: ''
+            description: '',
+            honeypot: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -50,7 +112,7 @@ class ContactForm extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <FormContainer>
                 <form onSubmit={this.handleSubmit}>
                     <input type="hidden" name="oid" value={this.state.oid} />
                     <input type="hidden" name="retURL" value={this.state.retURL} />
@@ -66,9 +128,10 @@ class ContactForm extends React.Component {
                     <input id="company" value={this.state.company} onChange={this.handleChange} maxLength="40" name="company" size="20" type="text" /><br />
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
-                    <input type="submit" name="submit" />
+                    <input type="hidden" name="honeypot" value={this.state.honeypot} />
+                    <input disabled type="submit" name="submit" />
                 </form>
-            </div>
+            </FormContainer>
         )
     }
 }

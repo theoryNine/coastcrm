@@ -29,13 +29,28 @@ const InnerBg = styled.div`
     }
 `
 
+const LogoContainer = styled.div`
+    display: none;
+    height: 100%;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+    }
+
+    & img {
+        height: 96%;
+    }
+`
+
 class Nav extends React.Component {
     render() {
         return(
             <nav className="nav" aria-label="Main navigation">
                 <Background>
                     <InnerBg className="container">
-                        <Logo />
+                        <LogoContainer>
+                            <Logo />
+                        </LogoContainer>
                         <NavMenu />
                     </InnerBg>
                 </Background>
