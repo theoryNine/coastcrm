@@ -9,6 +9,12 @@ const AboutSection = styled.section`
     background-color: ${props => props.theme.coastPrimary};
     background-image: url(${Pattern});
     text-align: center;
+
+    & ul {
+        & li {
+            margin-bottom: 2.5rem;
+        }
+    }
 `;
 
 class About extends React.Component {

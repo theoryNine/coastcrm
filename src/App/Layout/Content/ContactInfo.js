@@ -13,12 +13,13 @@ const ContactContainer = styled.div`
 
 const LogoContainer = styled.div`
     height: 180px;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 `
 
 const CoastName = styled.p`
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
+    line-height: 2.5rem;
     opacity: .9;
 `
 

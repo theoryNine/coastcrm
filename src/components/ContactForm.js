@@ -27,6 +27,7 @@ const FormContainer = styled.div`
 
     & input {
         border: 1px solid ${props => props.theme.coastPrimary};
+        border-radius: 0;
         font-size: .9rem;
         margin-bottom: 9px;
         max-width: 400px;
@@ -35,6 +36,7 @@ const FormContainer = styled.div`
 
         &[type=submit] {
             background-color: ${props => props.theme.coastPrimary};
+            border-radius: 0;
             color: ${props => props.theme.coastSecondary};
             cursor: pointer;
             font-weight: 700;
@@ -110,7 +112,42 @@ class ContactForm extends React.Component {
         })
     }
 
+    canBeSubmitted() {
+        const { first_name, email, description, honeypot } = this.state;
+        return (
+          first_name.length > 0 &&
+          email.length > 0 &&
+          description.length > 0 &&
+          honeypot.length === 0
+        );
+    }
+
+    handleSubmit = event => {
+        if (!this.canBeSubmitted()) {
+          event.preventDefault();
+          console.log("Submission failed");
+          return;
+        }
+        event.preventDefault();
+
+        const data = {
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            email: this.state.email,
+            company: this.state.company,
+            description: this.state.description
+        }
+
+        axios.post('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', { data })
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
+    };
+
     render() {
+        const isEnabled = this.canBeSubmitted();
+
         return(
             <FormContainer>
                 <form onSubmit={this.handleSubmit}>
@@ -123,13 +160,13 @@ class ContactForm extends React.Component {
                     <label htmlFor="last_name">Last Name</label><br />
                     <input id="last_name" value={this.state.last_name} onChange={this.handleChange} maxLength="80" name="last_name" size="20" type="text" /><br />
                     <label htmlFor="email">Email</label><br />
-                    <input id="email" value={this.state.email} onChange={this.handleChange} maxLength="80" name="email" size="20" type="text" /><br />
+                    <input id="email" value={this.state.email} onChange={this.handleChange} maxLength="80" name="email" size="20" type="email" /><br />
                     <label htmlFor="company">Company</label><br />
                     <input id="company" value={this.state.company} onChange={this.handleChange} maxLength="40" name="company" size="20" type="text" /><br />
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
                     <input type="hidden" name="honeypot" value={this.state.honeypot} />
-                    <input disabled type="submit" name="submit" />
+                    <input disabled={!isEnabled} type="submit" name="submit" />
                 </form>
             </FormContainer>
         )
