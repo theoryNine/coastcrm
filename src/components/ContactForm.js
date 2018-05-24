@@ -77,7 +77,7 @@ class ContactForm extends React.Component {
             email: '',
             company: '',
             description: '',
-            honeypot: ''
+            contact_me_by_fax_only: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -113,12 +113,12 @@ class ContactForm extends React.Component {
     }
 
     canBeSubmitted() {
-        const { first_name, email, description, honeypot } = this.state;
+        const { first_name, email, description, contact_me_by_fax_only } = this.state;
         return (
           first_name.length > 0 &&
           email.length > 0 &&
           description.length > 0 &&
-          honeypot.length === 0
+          contact_me_by_fax_only.length === 0
         );
     }
 
@@ -165,7 +165,7 @@ class ContactForm extends React.Component {
                     <input id="company" value={this.state.company} onChange={this.handleChange} maxLength="40" name="company" size="20" type="text" /><br />
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
-                    <input type="hidden" name="honeypot" value={this.state.honeypot} />
+                    <input type="checkbox" name="contact_me_by_fax_only" value={this.state.contact_me_by_fax_only} style={{ display: "none" }} tabindex="-1" autocomplete="off" />
                     <input disabled={!isEnabled} type="submit" name="submit" />
                 </form>
             </FormContainer>
