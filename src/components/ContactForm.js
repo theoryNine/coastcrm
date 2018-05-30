@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 const FormContainer = styled.div`
+    position: relative;
     width: 100%;
 
     & form {
@@ -64,6 +65,19 @@ const FormContainer = styled.div`
     }
 `
 
+const ThankYou = styled.div`
+    align-items: center;
+    background-color: white;
+    color: ${props => props.theme.coastPrimary};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+`
+
 class ContactForm extends React.Component {
     constructor (props) {
         super(props);
@@ -77,7 +91,8 @@ class ContactForm extends React.Component {
             email: '',
             company: '',
             description: '',
-            contact_me_by_fax_only: ''
+            contact_me_by_fax_only: '',
+            shown: false,
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -96,6 +111,9 @@ class ContactForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        this.setState({
+			shown: !this.state.shown
+		});
 
         const data = {
             first_name: this.state.first_name,
@@ -122,31 +140,12 @@ class ContactForm extends React.Component {
         );
     }
 
-    handleSubmit = event => {
-        if (!this.canBeSubmitted()) {
-          event.preventDefault();
-          console.log("Submission failed");
-          return;
-        }
-        event.preventDefault();
-
-        const data = {
-            first_name: this.state.first_name,
-            last_name: this.state.last_name,
-            email: this.state.email,
-            company: this.state.company,
-            description: this.state.description
-        }
-
-        axios.post('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', { data })
-        .then(res => {
-            console.log(res);
-            console.log(res.data);
-        })
-    };
-
     render() {
         const isEnabled = this.canBeSubmitted();
+
+        const shown = {
+			visibility: this.state.shown ? "visible" : "hidden"
+		};
 
         return(
             <FormContainer>
@@ -165,9 +164,13 @@ class ContactForm extends React.Component {
                     <input id="company" value={this.state.company} onChange={this.handleChange} maxLength="40" name="company" size="20" type="text" /><br />
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
-                    <input type="checkbox" name="contact_me_by_fax_only" value={this.state.contact_me_by_fax_only} style={{ display: "none" }} tabindex="-1" autocomplete="off" />
+                    <input type="checkbox" name="contact_me_by_fax_only" value={this.state.contact_me_by_fax_only} style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
                     <input disabled={!isEnabled} type="submit" name="submit" />
                 </form>
+                <ThankYou style={ shown }>
+                    <h2>Thank you</h2>
+                    <h3>We'll be in touch shortly</h3>
+                </ThankYou>
             </FormContainer>
         )
     }
