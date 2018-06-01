@@ -4,9 +4,11 @@ import Layout from './App/Layout.js'
 import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
 import solids from '@fortawesome/fontawesome-free-solid'
+import ReactGA from 'react-ga';
 
 fontawesome.library.add(brands, solids)
 
+ReactGA.initialize('UA-120214428-1');
 
 const CoastCRM = styled.div`
     font-family: ${props => props.theme.primaryFont};
