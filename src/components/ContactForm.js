@@ -81,7 +81,7 @@ class ContactForm extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            debug: 1,
+            debug: 0,
             debugEmail: 'anselcolvin@gmail.com',
             oid: '00D61000000eEuR',
             retURL: 'http://www.coastcrm.com',
