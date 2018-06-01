@@ -114,20 +114,6 @@ class ContactForm extends React.Component {
         this.setState({
 			shown: !this.state.shown
 		});
-
-        const data = {
-            first_name: this.state.first_name,
-            last_name: this.state.last_name,
-            email: this.state.email,
-            company: this.state.company,
-            description: this.state.description
-        }
-
-        axios.post('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', { data })
-        .then(res => {
-            console.log(res);
-            console.log(res.data);
-        })
     }
 
     canBeSubmitted() {
@@ -149,7 +135,7 @@ class ContactForm extends React.Component {
 
         return(
             <FormContainer>
-                <form onSubmit={this.handleSubmit}>
+                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                     <input type="hidden" name="oid" value={this.state.oid} />
                     <input type="hidden" name="retURL" value={this.state.retURL} />
                     <input type="hidden" name="debug" value={this.state.debug} /> 
@@ -165,7 +151,7 @@ class ContactForm extends React.Component {
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
                     <input type="checkbox" name="contact_me_by_fax_only" value={this.state.contact_me_by_fax_only} style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
-                    <input disabled={!isEnabled} type="submit" name="submit" />
+                    <input onClick={this.handleSubmit} disabled={!isEnabled} type="submit" name="submit" />
                 </form>
                 <ThankYou style={ shown }>
                     <h2>Thank you</h2>
