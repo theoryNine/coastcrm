@@ -84,7 +84,7 @@ class ContactForm extends React.Component {
             debug: 0,
             debugEmail: 'anselcolvin@gmail.com',
             oid: '00D61000000eEuR',
-            retURL: 'http://www.coastcrm.com',
+            retURL: 'https://www.coastcrm.com',
             last_name: '',
             email: '',
             company: '',
@@ -108,7 +108,6 @@ class ContactForm extends React.Component {
       }
 
     handleSubmit = event => {
-        event.preventDefault();
         this.setState({
 			shown: !this.state.shown
 		});
