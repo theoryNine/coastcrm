@@ -6,7 +6,7 @@ const Item = styled.a`
     color: ${props => props.theme.coastPrimary};
     transition: .3s ease all;
     display: flex;
-    font-size: 1rem;
+    font-size: .7rem;
     font-weight: 700;
     height: 100%;
     text-transform: uppercase;
@@ -15,6 +15,14 @@ const Item = styled.a`
     &:hover {
         background-color: rgb(38,47,77);
         color: ${props => props.theme.coastOrange};
+    }
+
+    @media (min-width: 375px) {
+        font-size: .9rem;
+    }
+
+    @media (min-width: 450px) {
+        font-size: 1rem;
     }
 
     @media (min-width:768px) {

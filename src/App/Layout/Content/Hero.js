@@ -52,7 +52,7 @@ class Hero extends React.Component {
         return(
             <HeroImage className="hero is-large shadowed" alt="">
                 <div className="hero-head container"><LogoTextDesktop src={LogoCopy} alt="Coast CRM Logo" /></div>
-                <Tagline text="Guiding you to Salesforce success" />
+                <Tagline text="Your guide to Salesforce success" />
                 <div className="hero-body container"><LogoTextMobile src={FullLogo} alt="Coast CRM Logo" /></div>
                 <div className="hero-foot"></div>
             </HeroImage>

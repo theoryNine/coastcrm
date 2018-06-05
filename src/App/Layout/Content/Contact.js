@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionHeader from '../../../components/SectionHeader.js'
+import SectionSubHeader from '../../../components/SectionSubHeader.js'
 import Divider from '../../../components/Divider.js'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import ContactInfo from './ContactInfo.js'
@@ -41,6 +42,7 @@ class Contact extends React.Component {
                     <SectionHeader text="Let's Talk" />
                 </ScrollableAnchor>
                 <Divider />
+                <SectionSubHeader text="Ready to love your Salesforce implementation?" />
                 <FlexContainer className="container content-container">
                     <FormContainer>
                         <ContactForm />

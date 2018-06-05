@@ -85,7 +85,6 @@ class ContactForm extends React.Component {
             debugEmail: 'anselcolvin@gmail.com',
             oid: '00D61000000eEuR',
             retURL: 'http://www.coastcrm.com',
-            first_name: '',
             last_name: '',
             email: '',
             company: '',
@@ -116,9 +115,9 @@ class ContactForm extends React.Component {
     }
 
     canBeSubmitted() {
-        const { first_name, email, description, contact_me_by_fax_only } = this.state;
+        const { last_name, email, description, contact_me_by_fax_only } = this.state;
         return (
-          first_name.length > 0 &&
+          last_name.length > 0 &&
           email.length > 0 &&
           description.length > 0 &&
           contact_me_by_fax_only.length === 0
@@ -139,9 +138,7 @@ class ContactForm extends React.Component {
                     <input type="hidden" name="retURL" value={this.state.retURL} />
                     <input type="hidden" name="debug" value={this.state.debug} /> 
                     <input type="hidden" name="debugEmail" value={this.state.debugEmail} /> 
-                    <label htmlFor="first_name">First Name</label><br />
-                    <input id="first_name" value={this.state.first_name} onChange={this.handleChange} maxLength="40" name="first_name" size="20" type="text" /><br />
-                    <label htmlFor="last_name">Last Name</label><br />
+                    <label htmlFor="last_name">Name</label><br />
                     <input id="last_name" value={this.state.last_name} onChange={this.handleChange} maxLength="80" name="last_name" size="20" type="text" /><br />
                     <label htmlFor="email">Email</label><br />
                     <input id="email" value={this.state.email} onChange={this.handleChange} maxLength="80" name="email" size="20" type="email" /><br />

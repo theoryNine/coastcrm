@@ -60,21 +60,21 @@ const ServiceDescContainer = styled.div`
     }
 `
 
-class ServiceSection2 extends React.Component {
+class ServiceSection4 extends React.Component {
     render() {
         return(
             <div className="container content-container">
                 <ServiceContainer>
                     <ServiceDescContainer>
-                        <ServiceHeader>Design</ServiceHeader>
+                        <ServiceHeader>Sustainable Partners</ServiceHeader>
                         <ul className="has-text-right">
-                            <ServiceListItem text="With the implementation plan in place, we design the first set of functionality we’ll deliver." />
-                            <ServiceListItem text="We focus on designing our solutions to enable your business objectives, provide intuitive interfaces for your teams and customers, and follow all technical best practices." />
-                            <ServiceListItem text="The output of the design phase is a set of well understood requirements, documented as user stories, allowing our team to start building with confidence." />
+                            <ServiceListItem text="Your business is always evolving, and Salesforce needs to follow suit." />
+                            <ServiceListItem text="Coast CRM will partner with your team to ensure your Salesforce implementation is always tailored to deliver maximum value to your organization." />
+                            <ServiceListItem text="We’ll also help you stay on top of Salesforce’s major feature releases, and implement the ones that are best suited to help your business." />
                         </ul>
                     </ServiceDescContainer>
                     <ServiceIconContainer>
-                        <FontAwesomeIcon icon={["fas", "cog"]} size="6x" />
+                        <FontAwesomeIcon icon={["fas", "edit"]} size="6x" />
                     </ServiceIconContainer>
                 </ServiceContainer>
             </div>
@@ -82,4 +82,4 @@ class ServiceSection2 extends React.Component {
     }
 }
 
-export default ServiceSection2;
+export default ServiceSection4;

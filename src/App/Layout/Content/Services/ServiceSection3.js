@@ -1,16 +1,18 @@
 import React from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
+import ServiceListItem from '../../../../components/ServiceListItem.js'
 
 const ServiceContainer = styled.div`
     color: ${props => props.theme.coastPrimary};
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin: 50px auto;
 `
 
 const ServiceHeader = styled.h2`
     color: ${props => props.theme.coastPrimary};
+    margin-bottom: 1rem;
 `
 
 const ServiceIconContainer = styled.div`
@@ -45,11 +47,13 @@ class ServiceSection3 extends React.Component {
                         <FontAwesomeIcon icon={["fas", "handshake"]} size="6x" />
                     </ServiceIconContainer>
                     <ServiceDescContainer>
-                        <ServiceHeader>Sustainable Partners</ServiceHeader>
-                        <p>Your business is constantly changing, your Salesforce implementations need to keep up. Salesforce 
-                        releases new features 3 times a year, Coast CRM will stay with you to help evolve your Salesforce 
-                        solutions to take advantage of the latest features.</p>
-                    </ServiceDescContainer>
+                    <ServiceHeader>Implementation</ServiceHeader>
+                    <ul>
+                        <ServiceListItem text="Equipped with a shared vision, we’ll get to work bringing the vision to life." />
+                        <ServiceListItem text="We work in short development cycles, incorporating feedback from your team early and often, to ensure you love what we build." />
+                        <ServiceListItem text="Our team always leverages as many standard and declarative Salesforce features as possible, working to minimize the use of custom code." />
+                    </ul>
+                </ServiceDescContainer>
                 </ServiceContainer>
             </div>
         )
