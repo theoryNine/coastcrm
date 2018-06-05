@@ -146,7 +146,7 @@ class ContactForm extends React.Component {
                     <label htmlFor="description">Message</label><br />
                     <textarea name="description" value={this.state.description} onChange={this.handleChange}></textarea><br />
                     <input type="checkbox" name="contact_me_by_fax_only" value={this.state.contact_me_by_fax_only} style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
-                    <input onClick={this.handleSubmit} disabled={!isEnabled} type="submit" name="submit" />
+                    <input onClick={this.handleSubmit} disabled={!isEnabled} type="submit" value="Submit" name="submit" />
                 </form>
                 <ThankYou style={ shown }>
                     <h2>Thank you</h2>
